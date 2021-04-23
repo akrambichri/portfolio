@@ -1,6 +1,4 @@
 import React, { useState, useRef, useEffect } from "react";
-import Slider from "./Carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { ReactVideo } from "reactjs-media";
 
 export default function ProjectModal(props) {
