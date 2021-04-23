@@ -1,65 +1,59 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import { IoLogoLinkedin, IoLogoGithub } from "react-icons/io5";
+import AboutMe from "./components/aboutMe";
+import Contact from "./components/contact";
+import NavBar from "./components/NavBar";
+import SectionHeader from "./components/sectionHeader";
+import Services from "./components/services";
+import Work from "./components/Work";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <div>
+      <main>
+        <section
+          className="relative flex min-h-screen h-auto flex-col"
+          id="home"
+        >
+          <div
+            className="absolute h-full w-full"
+            style={{
+              backgroundImage: "url('/assets/images/universe.jpg')",
+              backgroundSize: "cover",
+            }}
+          ></div>
+          <NavBar></NavBar>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+          <SectionHeader></SectionHeader>
+        </section>
+        <section id="aboutme" className="bg-white mt-8 pt-20 pb-28 px-8">
+          <AboutMe></AboutMe>
+        </section>
+        <section id="services" className="bg-gray-50 mt-8 pt-20 pb-28 px-8">
+          <Services></Services>
+        </section>
+        <section id="work" className="bg-white mt-8 py-20 px-8">
+          <Work></Work>
+        </section>
+        <section id="contact" className="h-screen pt-28 pb-36 px-8 bg-gray-50">
+          <Contact></Contact>
+        </section>
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
+      <footer className="space-x-6 inline-flex items-center justify-center w-full">
+        <a href="#">
+          <IoLogoLinkedin
+            name="logo-linkedin"
+            className="text-4xl hover:text-blue-700"
+          ></IoLogoLinkedin>
+        </a>
+        <a href="#">
+          <IoLogoGithub
+            name="logo-github"
+            className="text-4xl hover:text-blue-500"
+          ></IoLogoGithub>
         </a>
       </footer>
     </div>
-  )
+  );
 }
