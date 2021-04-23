@@ -48,5 +48,8 @@
     "name":"Nom",
     "email":"E-mail",
     "subject":"Objet",
-    "message":"Message"
+    "message":"Message",
+    "required": "Le champ {{field}} est obligatoire",
+    "maxLength":"Le champ {{field}} ne peut pas contenir plus de {{length}} caractères",
+    "pattern":"Le champ {{field}} est invalide"
 }

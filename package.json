@@ -8,8 +8,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.3",
     "@tailwindui/react": "^0.1.1",
-    "antd": "^4.15.1",
     "i18next": "^20.2.1",
     "next": "10.1.3",
     "react": "17.0.2",

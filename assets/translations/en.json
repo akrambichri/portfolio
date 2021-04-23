@@ -48,5 +48,9 @@
     "name":"Name",
     "email":"Email",
     "subject":"Subject",
-    "message":"Message"
+    "message":"Message",
+    "required": "The {{field}} field is required",
+    "maxLength":"The {{field}} field may not be greater than {{length}} characters",
+    "pattern":"The {{field}} field format is invalid"
+
 }
