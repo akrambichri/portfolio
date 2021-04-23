@@ -18,12 +18,15 @@ export default function Contact() {
   };
 
   const onSubmit = (data) => {
+    let myForm = document.getElementById("contact-form");
+    console.log(myForm);
+    let formData = new FormData(myForm);
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...data }),
+      body: new URLSearchParams(formData).toString(),
     })
-      .then(() => alert("Success!"))
+      .then(() => console.log("Form successfully submitted"))
       .catch((error) => alert(error));
   };
   console.log(errors);
@@ -36,7 +39,13 @@ export default function Contact() {
       <div className="mt-16 relative max-w-4xl mx-auto">
         <div className="absolute z-10 inset-0 bg-gradient-to-r from-cyan-400 to-emerald-400 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-lg"></div>
         <div className="relative z-20 bg-white rounded-md shadow-md p-12">
-          <form name="contact" method="POST" data-netlify="true">
+          <form
+            id="contact-form"
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            onSubmit={handleSubmit(onSubmit)}
+          >
             <input type="hidden" name="form-name" value="contact" />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
               <div className="w-full">
