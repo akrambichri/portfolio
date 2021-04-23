@@ -51,5 +51,8 @@
     "message":"Message",
     "required": "Le champ {{field}} est obligatoire",
     "maxLength":"Le champ {{field}} ne peut pas contenir plus de {{length}} caractères",
-    "pattern":"Le champ {{field}} est invalide"
+    "pattern":"Le champ {{field}} est invalide",
+    "loading":"Chargement en cours",
+    "success":"Message envoyé avec succès",
+    "error":"Un erreur est survenue, veuillez réessayer plus tard"
 }

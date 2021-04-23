@@ -75,7 +75,7 @@ export default function Contact() {
                 <CircularProgress className="p-0" size={16} color="white" />
               )}
               <label className="px-4 text-sm font-semibold text-white">
-                {alert.message}
+                {t(alert.message)}
               </label>
             </Alert>
           </Snackbar>

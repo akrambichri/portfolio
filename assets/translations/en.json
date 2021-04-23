@@ -51,6 +51,9 @@
     "message":"Message",
     "required": "The {{field}} field is required",
     "maxLength":"The {{field}} field may not be greater than {{length}} characters",
-    "pattern":"The {{field}} field format is invalid"
+    "pattern":"The {{field}} field format is invalid",
+    "loading":"Loading",
+    "success":"Message sent successfully",
+    "error":"An error has occurred, please try again later"
 
 }
