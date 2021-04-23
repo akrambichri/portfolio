@@ -1,5 +1,9 @@
 import { IoLogoLinkedin, IoLogoGithub } from "react-icons/io5";
+import { useTranslation } from "react-i18next";
+
 export default function SectionHeader() {
+  const { t, i18n } = useTranslation();
+
   return (
     <div className="z-20 max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto my-32 lg:my-0">
       <div className="w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl bg-gray-900 bg-opacity-70 mx-6 lg:mx-0 ">
@@ -22,7 +26,7 @@ export default function SectionHeader() {
             >
               <path d="M9 12H1v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6h-8v2H9v-2zm0-1H0V5c0-1.1.9-2 2-2h4V2a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1h4a2 2 0 0 1 2 2v6h-9V9H9v2zm3-8V2H8v1h4z" />
             </svg>
-            FULL-STACK WEB/MOBILE DEVELOPER
+            {t("function")}
           </p>
           <p className="pt-2 text-gray-100 text-xs lg:text-sm flex items-center justify-center lg:justify-start">
             <svg
@@ -35,9 +39,7 @@ export default function SectionHeader() {
             France, Paris
           </p>
           <p className="pt-8 text-base text-gray-100 font-semibold">
-            I love taking complex ideas or problems and turn them into simple
-            and beautiful apps, I also love the logic and structure of coding
-            and always strive to write elegant and efficient code.
+            {t("about_me")}
           </p>
 
           <div className=" py-6 pt-8 lg:pb-0 w-4/5 lg:w-full mx-auto flex flex-wrap items-center justify-center  lg:justify-start space-x-2">

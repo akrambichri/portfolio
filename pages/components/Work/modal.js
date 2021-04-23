@@ -1,9 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
 import { ReactVideo } from "reactjs-media";
+import { useTranslation } from "react-i18next";
 
 export default function ProjectModal(props) {
   const wrapperRef = useRef(null);
   const { project } = props;
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     /**
@@ -58,7 +60,7 @@ export default function ProjectModal(props) {
 
             <div className="relative p-6 py-2 flex-auto">
               <p className="my-4 text-blueGray-500 text-sm sm:text-lg  leading-relaxed">
-                {project.description}
+                {t(project.description)}
               </p>
             </div>
             {/*footer*/}
@@ -68,7 +70,7 @@ export default function ProjectModal(props) {
                 type="button"
                 onClick={props.toggleModal}
               >
-                Close
+                {t("close")}
               </button>
             </div>
           </div>

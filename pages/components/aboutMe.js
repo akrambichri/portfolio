@@ -1,10 +1,14 @@
 import { IoSchoolOutline, IoBriefcaseOutline } from "react-icons/io5";
+import { useTranslation } from "react-i18next";
+
 export default function AboutMe() {
+  const { t, i18n } = useTranslation();
+
   return (
     <div className="max-w-6xl mx-auto">
       <div className="text-center">
-        <h1 className="text-6xl font-bold text-gray-800">About Me</h1>
-        <p className="pt-2">Professional career</p>
+        <h1 className="text-6xl font-bold text-gray-800">{t("about")}</h1>
+        <p className="pt-2">{t("professional_career")}</p>
       </div>
       <div className="mt-24 font-bold">
         <div className="container">
@@ -18,15 +22,16 @@ export default function AboutMe() {
                   ></IoBriefcaseOutline>
                   <h3>
                     SamaPass{" "}
-                    <smal className="text-gray-300 text-sm">- 6 months</smal>
+                    <smal className="text-gray-300 text-sm">
+                      - 6 {t("months")}
+                    </smal>
                   </h3>
                 </div>
 
                 <h4 className="leading-tight text-justify ">
                   Mission :{" "}
                   <small className="text-gray-300">
-                    Conception et réalisation d'une application Wallet (SamaPass
-                    Wallet), App Web et App Mobile.
+                    {t("samapass_mission")}
                   </small>
                 </h4>
                 <h4 className="leading-tight text-justify">
@@ -62,16 +67,14 @@ export default function AboutMe() {
                   ></IoBriefcaseOutline>
                   <h3>
                     Vision Business Consulting{" "}
-                    <smal className="text-gray-300 text-sm">- 6 months</smal>
+                    <smal className="text-gray-300 text-sm">
+                      - 6 {t("months")}
+                    </smal>
                   </h3>
                 </div>
                 <h4 className="leading-tight text-justify ">
                   Mission :{" "}
-                  <small className="text-gray-300">
-                    Conception et réalisation d'une application pour la gestion
-                    des questionnaires d'évaluation du risque (AssurRisk),
-                    Dashboard Web et App Mobile.
-                  </small>
+                  <small className="text-gray-300">{t("vbc_mission")}</small>
                 </h4>
                 <h4 className="leading-tight text-justify">
                   Technologies :{" "}
@@ -91,16 +94,14 @@ export default function AboutMe() {
                   ></IoBriefcaseOutline>{" "}
                   <h3>
                     Zen Capital
-                    <smal className="text-gray-300 text-sm">- 6 months</smal>
+                    <smal className="text-gray-300 text-sm">
+                      - 6 {t("months")}
+                    </smal>
                   </h3>
                 </div>
                 <h4 className="leading-tight text-justify ">
                   Mission :{" "}
-                  <small className="text-gray-300">
-                    Conception et réalisation d'une application pour la gestion
-                    du pointage et la génération de tableaux de bord
-                    décisionnels, App Desktop.
-                  </small>
+                  <small className="text-gray-300">{t("zen_mission")}</small>
                 </h4>
                 <h4 className="leading-tight text-justify">
                   Technologies :{" "}
@@ -136,16 +137,14 @@ export default function AboutMe() {
                   ></IoBriefcaseOutline>{" "}
                   <h3>
                     SUEZ{" "}
-                    <smal className="text-gray-300 text-sm">- 12 months</smal>
+                    <smal className="text-gray-300 text-sm">
+                      - 12 {t("months")}
+                    </smal>
                   </h3>
                 </div>
                 <h4 className="leading-tight text-justify ">
                   Mission :{" "}
-                  <small className="text-gray-300">
-                    Conception et réalisation d'une application pour la gestion
-                    interne de la société SUEZ RV Maroc (BE'IT), Dashboard Web
-                    et App Mobile.
-                  </small>
+                  <small className="text-gray-300">{t("suez_mission")}</small>
                 </h4>
                 <h4 className="leading-tight text-justify">
                   Technologies :{" "}
@@ -165,15 +164,14 @@ export default function AboutMe() {
                   ></IoBriefcaseOutline>{" "}
                   <h3>
                     CNSS{" "}
-                    <smal className="text-gray-300 text-sm">- 3 months</smal>
+                    <smal className="text-gray-300 text-sm">
+                      - 3 {t("months")}
+                    </smal>
                   </h3>
                 </div>
                 <h4 className="leading-tight text-justify ">
                   Mission :{" "}
-                  <small className="text-gray-300">
-                    Conception et réalisation d'une application pour la gestion
-                    des incidents, Dashboard Web.
-                  </small>
+                  <small className="text-gray-300">{t("cnss_mission")}</small>
                 </h4>
                 <h4 className="leading-tight text-justify">
                   Technologies :{" "}

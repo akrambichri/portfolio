@@ -1,4 +1,3 @@
-import Head from "next/head";
 import { IoLogoLinkedin, IoLogoGithub } from "react-icons/io5";
 import AboutMe from "./components/aboutMe";
 import Contact from "./components/contact";
@@ -23,6 +22,7 @@ export default function Home() {
             }}
           ></div>
           <NavBar></NavBar>
+          {/* <LanguageDropDown></LanguageDropDown> */}
 
           <SectionHeader></SectionHeader>
         </section>

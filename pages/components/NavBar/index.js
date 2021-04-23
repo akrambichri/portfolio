@@ -1,26 +1,8 @@
 import { Link } from "react-scroll";
 import React, { useEffect, useState, useRef } from "react";
 import MenuItems from "../../../assets/menuItems/MenuItems";
-
-function useOutsideAlerter(ref) {
-  useEffect(() => {
-    /**
-     * Alert if clicked on outside of element
-     */
-    function handleClickOutside(event) {
-      if (ref.current && !ref.current.contains(event.target)) {
-        alert("You clicked outside of me!");
-      }
-    }
-
-    // Bind the event listener
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      // Unbind the event listener on clean up
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [ref]);
-}
+import LanguageDropDown from "./components/LanguageDropDown";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -28,6 +10,7 @@ const Navbar = () => {
   const [menuClicked, setMenuClicked] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const wrapperRef = useRef(null);
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     /**
@@ -105,7 +88,7 @@ const Navbar = () => {
                     isDynamic={true}
                     duration={500}
                   >
-                    {item.title}
+                    {t(item.title)}
                   </Link>
                 );
               })}
@@ -153,6 +136,8 @@ const Navbar = () => {
               </button>
             )}
           </div>
+
+          <LanguageDropDown></LanguageDropDown>
         </div>
       </div>
 
@@ -178,7 +163,7 @@ const Navbar = () => {
                   isDynamic={true}
                   duration={500}
                 >
-                  {item.title}
+                  {t(item.title)}
                 </Link>
               );
             })}

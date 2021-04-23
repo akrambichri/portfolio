@@ -4,12 +4,16 @@ import {
   IoRocketOutline,
   IoSpeedometerOutline,
 } from "react-icons/io5";
+import { useTranslation } from "react-i18next";
+
 export default function Services() {
+  const { t, i18n } = useTranslation();
+
   return (
     <div className="max-w-6xl mx-auto">
       <div className="text-center">
-        <h1 className="text-6xl font-bold text-gray-800">Services</h1>
-        <p className="pt-2">Here's what I offer</p>
+        <h1 className="text-6xl font-bold text-gray-800">{t("services")}</h1>
+        <p className="pt-2">{t("what_I_offer")}</p>
       </div>
       <div className="mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20">
         <div className="relative h-full text-center justify-center items-center space-y-4 flex flex-col">
@@ -19,8 +23,8 @@ export default function Services() {
               className="text-5xl text-white"
             ></IoBulbOutline>
           </div>
-          <h2 className="font-bold text-2xl">Intuitives</h2>
-          <p>Strong preference for easy to use, intuitive UX/UI.</p>
+          <h2 className="font-bold text-2xl">{t("intuitives")}</h2>
+          <p>{t("intuitives_desc")}</p>
         </div>
         <div className="relative h-full text-center justify-center space-y-4 items-center flex flex-col">
           <div className="bg-gradient-to-r from-cyan-400 to-emerald-400 p-10 shadow-md rounded-full ">
@@ -29,8 +33,8 @@ export default function Services() {
               className="text-5xl text-white"
             ></IoPhonePortraitOutline>
           </div>
-          <h2 className=" font-bold text-2xl">Responsive</h2>
-          <p className="">My layouts will work on any device, big or small.</p>
+          <h2 className=" font-bold text-2xl">{t("responsive")}</h2>
+          <p className="">{t("responsive_desc")}</p>
         </div>
         <div className="relative h-full rounded-md  text-center justify-center space-y-4 items-center flex flex-col">
           <div className="bg-gradient-to-r from-cyan-400 to-emerald-400 p-10 shadow-md rounded-full ">
@@ -39,10 +43,8 @@ export default function Services() {
               className="text-5xl text-white"
             ></IoSpeedometerOutline>
           </div>
-          <h2 className=" font-bold text-2xl">Fast</h2>
-          <p className="">
-            Fast load times and lag free interaction, my highest priority.
-          </p>
+          <h2 className=" font-bold text-2xl">{t("fast")}</h2>
+          <p className="">{t("fast_desc")}</p>
         </div>
         <div className="relative h-full text-center justify-center items-center w-full flex flex-col space-y-4">
           <div className="bg-gradient-to-r from-cyan-400 to-emerald-400 p-10  shadow-md rounded-full ">
@@ -51,13 +53,13 @@ export default function Services() {
               className="text-5xl text-white"
             ></IoRocketOutline>
           </div>
-          <h2 className=" font-bold text-2xl">Dynamic</h2>
-          <p className="">Websites don't have to be static, give them life.</p>
+          <h2 className=" font-bold text-2xl">{t("dynamic")}</h2>
+          <p className="">{t("dynamic_desc")} </p>
         </div>
       </div>
       <div className="mt-24">
         <div className="text-center">
-          <p className="pt-2">Ma boite à outils</p>
+          <p className="pt-2">{t("toolbox")}</p>
         </div>
         <div className="relative lg:pt-0 lg:flex lg:text-left one-4-col mb-12">
           <div className="blocks  lg:w-1/2">
@@ -89,10 +91,7 @@ export default function Services() {
                     </div>
                   </div>
                   <span className="text-gray-700">
-                    <p>
-                      GraphQL est un langage de requête pour Optimiser les
-                      traitements et Maximisation de l'expérience utilisateur.
-                    </p>
+                    <p>{t("graph_desc")}</p>
                   </span>
                 </li>
 
@@ -118,10 +117,7 @@ export default function Services() {
                     </div>
                   </div>
                   <span className="text-gray-700">
-                    <p>
-                      Laravel est un framework novateur, complet, qui utilise
-                      les possibilités les plus récentes.
-                    </p>
+                    <p>{t("laravel_desc")}</p>
                   </span>
                 </li>
 
@@ -147,11 +143,7 @@ export default function Services() {
                     </div>
                   </div>
                   <span className="text-gray-700">
-                    <p>
-                      ExpressJS est un framework qui se veut minimaliste. Très
-                      léger, Il priorise les performances optimales et
-                      l'exécution rapide.
-                    </p>
+                    <p>{t("express_desc")}</p>
                   </span>
                 </li>
 
@@ -195,9 +187,7 @@ export default function Services() {
                     </div>
                   </div>
                   <span className="text-gray-700">
-                    <p>
-                      Les bases de données relationelles et non relationelles.
-                    </p>
+                    <p>{t("db_desc")}</p>
                   </span>
                 </li>
               </ul>
@@ -260,7 +250,7 @@ export default function Services() {
                     </div>
                   </div>
                   <span className="text-gray-700">
-                    <p>Les incontournables du développement web.</p>
+                    <p>{t("fundamentals_desc")}</p>
                   </span>
                 </li>
 
@@ -286,10 +276,7 @@ export default function Services() {
                     </div>
                   </div>
                   <span className="text-gray-700">
-                    <p>
-                      Un framework CSS modulable et basé sur l'utilisation de
-                      classes utilitaires.
-                    </p>
+                    <p>{t("tailwind_desc")}</p>
                   </span>
                 </li>
 
@@ -336,10 +323,7 @@ export default function Services() {
                     </div>
                   </div>
                   <span className="text-gray-700">
-                    <p>
-                      Un framework JavaScript léger et minimaliste pour mettre
-                      en place les interactions simples.
-                    </p>
+                    <p>{t("jsfw_desc")}</p>
                   </span>
                 </li>
 
@@ -374,10 +358,7 @@ export default function Services() {
                     </div>
                   </div>
                   <span className="text-gray-700">
-                    <p>
-                      Un compilateur JavaScript pour construire des intéractions
-                      et des applications plus élaborées.
-                    </p>
+                    <p>{t("mobile_desc")}</p>
                   </span>
                 </li>
               </ul>
