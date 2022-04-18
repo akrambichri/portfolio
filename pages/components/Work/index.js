@@ -96,6 +96,40 @@ export default function Work() {
             </button>
           </div>
         </div>
+        {/* <div className="bg-white">
+           <img
+            src={ProjectsData[2].image}
+            alt=""
+            className="object-cover w-full h-80"
+          />
+          <div className="p-8">
+            <h3 className="font-bold text-2xl">{ProjectsData[2].title}</h3>
+            <p className="pt-3">{t(ProjectsData[2].smallDescription)}</p>
+            <button
+              onClick={() => toggleModal(2)}
+              className="inline-block mt-4 px-6 py-2 bg-gradient-to-r from-cyan-400 to-emerald-400 rounded-md shadow-md text-sm font-bold text-white"
+            >
+              {t("view_more")}
+            </button>
+          </div>
+        </div> */}
+        {/* <div className="bg-white rounded-md shadow-md lg:col-span-2">
+          <img
+            src={ProjectsData[3].image}
+            alt=""
+            className="object-cover w-full h-80"
+          />
+          <div className="p-8">
+            <h3 className="font-bold text-2xl">{ProjectsData[3].title}</h3>
+            <p className="pt-3">{t(ProjectsData[3].smallDescription)}</p>
+            <button
+              onClick={() => toggleModal(3)}
+              className="inline-block mt-4 px-6 py-2 bg-gradient-to-r from-cyan-400 to-emerald-400 rounded-md shadow-md text-sm font-bold text-white"
+            >
+              {t("view_more")}
+            </button>
+          </div>
+        </div> */}
       </div>
 
       <ProjectModal

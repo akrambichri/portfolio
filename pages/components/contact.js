@@ -87,7 +87,7 @@ export default function Contact() {
             netlify-honeypot="bot-field"
             onSubmit={handleSubmit(onSubmit)}
           >
-            <p class="hidden">
+            <p className="hidden">
               <label>
                 Don’t fill this out if you’re human: <input name="bot-field" />
               </label>
