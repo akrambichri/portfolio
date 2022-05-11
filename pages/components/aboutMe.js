@@ -23,7 +23,7 @@ export default function AboutMe() {
                   <h3>
                     SamaPass{" "}
                     <smal className="text-gray-300 text-sm">
-                      - 6 {t("months")}
+                      - 18 {t("months")}
                     </smal>
                   </h3>
                 </div>
